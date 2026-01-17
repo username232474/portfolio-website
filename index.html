@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abebech Girma | Creative Portfolio</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">AG</span>
+                <span class="brand-name">Abebech Girma</span>
+            </div>
+            
+            <ul class="top-nav-menu">
+                <li><a href="#home" class="top-nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="top-nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="top-nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="top-nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#education" class="top-nav-link" data-section="education">Education</a></li>
+                <li><a href="#contact" class="top-nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            
+                <div class="nav-actions">
+                <a href="professional_cv.html" class="nav-btn">
+                    <i class="fas fa-file"></i> View CV
+                </a>
+                <a href="CV.pdf" class="nav-btn" download>
+                    <i class="fas fa-download"></i> Download
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="glitch-text" data-text="ABEBECH GIRMA">ABEBECH GIRMA</div>
+                    <div class="animated-title">
+                        <span class="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description">
+                        <span class="highlight-neon">Software Engineering Student</span> at Debremarkos University
+                        <br>Creating digital experiences with passion and precision
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="neon-btn primary" onclick="scrollToSection('contact')">
+                            <span>Hire Me</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <button class="neon-btn secondary" onclick="scrollToSection('projects')">
+                            <span>View Work</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <div class="scroll-indicator">
+                        <div class="scroll-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <span>Scroll to explore</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-container">
+                        <div class="profile-image">
+                            <img src="images/image.png" alt="Abebech Girma">
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="floating-icons">
+                            <div class="icon-float" style="--delay: 0s"><i class="fab fa-html5"></i></div>
+                            <div class="icon-float" style="--delay: 1s"><i class="fab fa-css3-alt"></i></div>
+                            <div class="icon-float" style="--delay: 2s"><i class="fab fa-js"></i></div>
+                            <div class="icon-float" style="--delay: 3s"><i class="fab fa-react"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">.</span>
+                    About Me
+                    <div class="title-line"></div>
+                </h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3 class="neon-text">My Story</h3>
+                        <p>I'm <span class="highlight-neon">Abebech Girma</span>, a passionate Software Engineering student
+                             at Debremarkos University. My journey into technology began with curiosity and evolved into
+                              a deep passion for creating innovative digital solutions.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3 class="neon-text">My Mission</h3>
+                        <p>I specialize in full-stack development, focusing on creating responsive, 
+                            user-friendly interfaces with clean, maintainable code. I believe in the
+                             power of technology to solve real-world problems.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="200">0</div>
+                            <div class="stat-label">Code Hours</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="2024">0</div>
+                            <div class="stat-label">Graduation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="about-photo-container">
+                        <img src="images/image.png" alt="Abebech Girma" class="about-photo">
+                    </div>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Education</h4>
+                            <p>Software Engineering</p>
+                            <span>Debremarkos University</span>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>Location</h4>
+                            <p>Debremarkos</p>
+                            <span>Ethiopia</span>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4>Status</h4>
+                            <p>Available</p>
+                            <span>For Internship 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add professional CV link -->
+            <div class="cv-link">
+                <a href="path/to/professional_cv.pdf" target="_blank">View CV</a>
+            </div>
+
+            <!-- photo moved into the About column -->
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">.</span>
+                    Skills & Expertise
+                    <div class="title-line"></div>
+                </h2>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend Technologies</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>CSS3</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript ES6+</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git & GitHub</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>VS Code</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Responsive Design</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Technology Stack</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon" data-tech="HTML5">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="CSS3">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="JavaScript">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="React">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="tech-icon" data-tech="GitHub">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">.</span>
+                    Education
+                    <div class="title-line"></div>
+                </h2>
+            </div>
+
+            <div class="education-container">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-info">
+                        <h3>Bachelor of Science in Software Engineering</h3>
+                        <h4>Debremarkos University</h4>
+                        <p class="education-period">2023 - present</p>
+                        <p class="education-gpa">Current GPA: 3.58/4.0</p>
+                        <div class="education-courses">
+                            <h5>Key Coursework:</h5>
+                            <ul>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Web Development Technologies</li>
+                                <li>Database Management Systems</li>
+                                <li>Object-Oriented Programming</li>
+                                <li>Software Engineering Principles...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">.</span>
+                    Featured Projects
+                    <div class="title-line"></div>
+                </h2>
+            </div>
+
+                <div class="projects-grid">
+                <!-- E-Commerce (Coming Soon) - not on GitHub, no links -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/e-commerse.jpg" alt="E-Commerce Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <!-- Coming Soon: no GitHub/demo link -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Planned online store with shopping cart and payment integration (Coming Soon)</p>
+                        <div class="project-tech">
+                            <span>Planned</span>
+                        </div>
+                        <div class="project-status-inline coming-soon">Coming Soon</div>
+                    </div>
+                </div>
+
+                <!-- Creative Portfolio (Completed) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/image.png" alt="Portfolio Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/username232474/Portfolio-website" target="_blank" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/username232474/Portfolio-website#readme" target="_blank" class="project-link" title="Demo / README">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Creative Portfolio</h3>
+                        <p>Modern portfolio website with dark theme and neon effects</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-status-inline completed">Completed</div>
+                    </div>
+                </div>
+
+                <!-- Task Manager (On Going) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/download.jpg" alt="Task Manager">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/username232474/task-manager" target="_blank" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/username232474/task-manager#readme" target="_blank" class="project-link" title="Demo / README">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Manager</h3>
+                        <p>Advanced task management app with real-time updates (On Going)</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>LocalStorage</span>
+                            <span>CSS Grid</span>
+                        </div>
+                        <div class="project-status-inline ongoing">On Going</div>
+                    </div>
+                </div>
+
+                <!-- Bus Ticket (Coming Soon) - not on GitHub -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/download.jpg" alt="Bus Ticket Booking">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <!-- Coming Soon: no GitHub/demo link -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Bus Ticket Booking</h3>
+                        <p>Mobile-first booking system for intercity buses (Coming Soon)</p>
+                        <div class="project-tech">
+                            <span>Planned</span>
+                        </div>
+                        <div class="project-status-inline coming-soon">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">.</span>
+                    Get In Touch
+                    <div class="title-line"></div>
+                </h2>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="neon-text">Let's Connect</h3>
+                    <p>Ready to bring your ideas to life? Let's discuss how we can work together.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <p>abyehani804@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Phone</h4>
+                                <p>+251 923 247 413</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Location</h4>
+                                <p>Debremarkos, Ethiopia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <button type="submit" class="neon-btn primary">
+                            <span>Send Message</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </form>
+                    
+                    <!-- Alternative Contact Methods -->
+                    <div class="contact-alternatives">
+                        <h4>Or reach me directly:</h4>
+                        <div class="direct-contact">
+                            <a href="mailto:abyehani804@gmail.com" class="contact-direct">
+                                <i class="fas fa-envelope"></i>
+                                <span>Send Email</span>
+                            </a>
+                            <a href="tel:+251923247413" class="contact-direct">
+                                <i class="fas fa-phone"></i>
+                                <span>Call Now</span>
+                            </a>
+                            <a href="https://t.me/251923247413" target="_blank" class="contact-direct">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="contact-direct">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">AG</h3>
+                    <a href="professional_cv.html" class="footer-cv-link">View CV</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul class="two-column-links">
+                        <li><a href="#home" class="footer-nav-link" data-section="home">Home</a></li>
+                        <li><a href="#about" class="footer-nav-link" data-section="about">About</a></li>
+                        <li><a href="#skills" class="footer-nav-link" data-section="skills">Skills</a></li>
+                        <li><a href="#projects" class="footer-nav-link" data-section="projects">Projects</a></li>
+                        <li><a href="#education" class="footer-nav-link" data-section="education">Education</a></li>
+                        <li><a href="#contact" class="footer-nav-link" data-section="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:abyehani804@gmail.com">abyehani804@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+251923247413">+251 923 247 413</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Debremarkos, Ethiopia</span>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/username232474" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/abebech-girma" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://t.me/Abyehani" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="mailto:abyehani804@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; Abebech Girma <span id="currentYear">2026</span> All rights reserved.</p>
+                    <p class="footer-tech">Built with HTML5, CSS3 & JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-text">LOADING</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

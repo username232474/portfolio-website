@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abebech Girma — Professional CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      :root{--accent:#0b74e6;--muted:#6b7280;--text:#111;--bg:#fff}
+      *{box-sizing:border-box}
+      body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:18px}
+      .page{max-width:900px;margin:0 auto;background:var(--bg);padding:28px}
+
+      /* Header */
+      .top{ text-align:center;padding-bottom:14px }
+      .top .name{font-family:Montserrat,system-ui,Arial;font-size:40px;font-weight:800;margin-bottom:6px}
+      .top .role{font-size:18px;color:var(--muted);margin-bottom:12px}
+      .contact-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;color:var(--accent);font-weight:600;margin-bottom:10px}
+      .contact-row a{color:var(--accent);text-decoration:none}
+      .divider{height:4px;background:linear-gradient(90deg,var(--accent),#0366d6);border-radius:2px;margin:16px 0}
+
+      /* Layout */
+      .grid{display:grid;grid-template-columns:1fr 2fr;gap:28px}
+      @media(max-width:800px){.grid{grid-template-columns:1fr}}
+
+      /* Left column */
+      .left{padding:4px}
+      .section-title{color:var(--accent);font-weight:700;margin:8px 0 10px;font-size:16px}
+      .contact-list, .skills-list, .meta-list{list-style:none;padding:0;margin:0}
+      .contact-list li{margin:8px 0;color:#0b2b47}
+
+      .skill-item{margin:6px 0}
+      .skill-bar{height:8px;background:#e6eefb;border-radius:6px;overflow:hidden;margin-top:6px}
+      .skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),#0366d6)}
+
+      /* Right column */
+      .right{padding:4px}
+      .summary{line-height:1.6;color:#222}
+      .section{margin-bottom:12px}
+
+      .edu-item{margin:8px 0}
+      .project-item{margin:8px 0}
+      .experience-item{margin:8px 0}
+
+      .download{display:inline-block;margin-top:10px;padding:8px 12px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;font-weight:700}
+
+      footer{color:var(--muted);text-align:center;margin-top:18px;font-size:13px}
+
+      /* Print optimizations */
+      @media print{
+        body{padding:8mm}
+        .page{box-shadow:none}
+        .download{display:none}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="name">Abebech Girma</div>
+        <div class="role">Software Engineering Student</div>
+
+        <div class="contact-row">
+          <div><a href="mailto:abyehani804@gmail.com">abyehani804@gmail.com</a></div>
+          <div><a href="tel:+251923247413">+251 923 247 413</a></div>
+          <div>Debremarkos University, Ethiopia</div>
+          <div><a href="https://t.me/Abyehani" target="_blank">@Abyehani</a></div>
+          <div><a href="https://github.com/username232474" target="_blank">github.com/username232474</a></div>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+      </header>
+
+      <div class="grid">
+        <aside class="left">
+          <div class="section">
+            <div class="section-title">Contact</div>
+            <ul class="contact-list">
+              <li>Email: abeyhani804@gmail.com</li>
+              <li>Phone: +251 923 247 413</li>
+              <li>Location: Debremarkos, Ethiopia</li>
+              <li>LinkedIn: linkedin.com/in/abebech-girma</li>
+              <li>Telegram: @Abyehani</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-list">
+              <div class="skill-item">HTML5 <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+              <div class="skill-item">CSS3 <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+              <div class="skill-item">JavaScript (ES6+) <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+              <div class="skill-item">React <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+              <div class="skill-item">Java / Spring Boot <div class="skill-bar"><div class="skill-fill" style="width:98%"></div></div></div>
+              <div class="skill-item">Python / ML <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tools</div>
+            <ul class="meta-list">
+              <li>Git, GitHub</li>
+              <li>VS Code, npm, Webpack</li>
+              <li>Figma (basic), UI/UX basics</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="right">
+          <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">Expert Java developer and Software Engineering student at Debremarkos University with strong experience building web applications and backend systems. Adept in Java, Spring Boot, Python, and modern frontend stacks. Committed to delivering maintainable, accessible user interfaces and robust server-side services.</div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Experience</div>
+            <div class="experience-item">
+              <strong>Front-End Developer — Freelance</strong>
+              <div style="color:var(--muted);font-size:13px">2024 — Present</div>
+              <ul class="plain-list">
+                <li>Develop responsive websites and single-page applications using React and modern CSS.</li>
+                <li>Collaborate with stakeholders to translate requirements into usable features.</li>
+                <li>Implement accessibility improvements and performance optimizations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Projects</div>
+            <div class="project-item"><strong>Creative Portfolio</strong> — Modern portfolio website (HTML, CSS, JavaScript). <a href="https://github.com/username232474/Portfolio-website" target="_blank">Repo</a></div>
+            <div class="project-item"><strong>Hotel Reservation System</strong> — Java booking backend and simple frontend. <a href="https://github.com/username232474/HotelReservationSystem" target="_blank">Repo</a></div>
+            <div class="project-item"><strong>Task Manager</strong> — Web task app (ongoing). <a href="https://github.com/username232474/task-manager" target="_blank">Repo</a></div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-item"><strong>B.Sc. Software Engineering</strong> — Debremarkos University<br><span style="color:var(--muted)">2023 — Present · Current GPA: 3.58/4.0</span></div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Languages</div>
+            <div>English — Professional working proficiency<br>Amharic — Native</div>
+          </div>
+
+          <div style="margin-top:8px">
+            <a class="download" href="CV.pdf" download>Download PDF</a>
+          </div>
+        </section>
+      </div>
+
+      <footer>Generated: 2026</footer>
+    </div>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abebech Girma_CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      /* Simple, print-friendly CV style modeled after the provided sample */
+      :root{--text:#111;--muted:#666}
+      html,body{height:100%}
+      body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--text);margin:0;padding:32px}
+      .paper{max-width:800px;margin:0 auto}
+
+      .header{margin-bottom:18px}
+      .header .name{font-size:32px;font-weight:800;letter-spacing:0.5px}
+      .header .role{margin-top:8px;font-size:15px;color:var(--muted)}
+
+      .section-title{margin-top:18px;margin-bottom:8px;font-size:16px;font-weight:800;text-transform:uppercase}
+      .contact-list, .plain-list{list-style:none;padding-left:0;color:var(--text)}
+      .contact-list li{margin:6px 0}
+      .plain-list li{margin:6px 0}
+
+      .summary{margin-top:6px;color:var(--text);line-height:1.5}
+      .skills, .experience, .education{line-height:1.5}
+
+      a{color:inherit}
+
+      @media print{
+        body{padding:12mm}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="name">Abebech Girma</div>
+        <div class="role">Software Engineering Student</div>
+
+        <div style="margin-top:12px">
+          <div class="section-title">Contact Information</div>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:abyehani804@gmail.com">abyehani804@gmail.com</a></li>
+            <li>Phone: <a href="tel:+251923247413">+251 923 247 413</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/abebech-girma" target="_blank">linkedin.com/in/abebech-girma</a></li>
+            <li>Telegram: <a href="https://t.me/Abyehani" target="_blank">@Abyehani</a></li>
+            <li>GitHub: <a href="https://github.com/username232474" target="_blank">github.com/username232474</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <div class="section-title">Professional Summary</div>
+          <p class="summary">Passionate Software Engineering student specializing in creating responsive, user-friendly web applications with modern technologies.</p>
+        </section>
+
+        <section>
+          <div class="section-title">Technical Skills</div>
+          <div class="skills">
+            <p>Front-End: HTML5, CSS3, JavaScript (ES6+), React.js</p>
+            <p>Responsive Design: Flexbox, Grid, Media Queries, Bootstrap</p>
+            <p>Tools: Git, GitHub, npm, Webpack, VS Code</p>
+            <p>Design: UI/UX Design, Accessibility (a11y)</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">Experience</div>
+          <div class="experience">
+            <p><strong>Front-End Developer — Freelance</strong></p>
+            <p>2024 - Present</p>
+            <ul class="plain-list">
+              <li>Developing responsive websites and web applications</li>
+              <li>Specializing in React.js and modern CSS</li>
+              <li>Creating accessible user interfaces</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">Education</div>
+          <div class="education">
+            <p><strong>Front-End Development — Self-Learning & Online Platforms</strong></p>
+            <p>2023 - Present</p>
+          </div>
+        </section>
+
+        <div style="text-align:left;margin-top:18px">
+          <small style="color:var(--muted)">Generated: 2026</small>
+        </div>
+      </main>
+
+      <footer>Generated: 2026</footer>
+    </div>
+  </body>
+</html>
