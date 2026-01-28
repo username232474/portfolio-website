@@ -16,6 +16,23 @@
       .top{ text-align:center;padding-bottom:14px }
       .top .name{font-family:Montserrat,system-ui,Arial;font-size:40px;font-weight:800;margin-bottom:6px}
       .top .role{font-size:18px;color:var(--muted);margin-bottom:12px}
+      /* Add this after .top .role style */
+.top img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 8px 20px rgba(11, 116, 230, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(11, 116, 230, 0.35);
+}
       .contact-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;color:var(--accent);font-weight:600;margin-bottom:10px}
       .contact-row a{color:var(--accent);text-decoration:none}
       .divider{height:4px;background:linear-gradient(90deg,var(--accent),#0366d6);border-radius:2px;margin:16px 0}
@@ -58,6 +75,7 @@
   <body>
     <div class="page">
       <header class="top">
+        <img src="images/ab.jpg" alt="">
         <div class="name">Abebech Girma</div>
         <div class="role">Software Engineering Student</div>
 
