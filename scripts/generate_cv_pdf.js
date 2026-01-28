@@ -12,14 +12,14 @@ const path = require("path");
     await page.goto(fileUrl, { waitUntil: "networkidle0" });
 
     await page.pdf({
-      path: path.resolve(__dirname, "..", "CV.pdf"),
+      path: path.resolve(__dirname, "..", "scripts/Abebech Girma—CV.pdf"),
       format: "A4",
       printBackground: true,
       margin: { top: "20mm", bottom: "20mm", left: "15mm", right: "15mm" },
     });
 
     await browser.close();
-    console.log("CV.pdf generated successfully.");
+    console.log("scripts/Abebech Girma—CV.pdf generated successfully.");
   } catch (err) {
     console.error("Error generating PDF:", err);
     process.exit(1);
