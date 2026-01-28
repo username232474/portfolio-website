@@ -1,3 +1,16 @@
+# Eclipse IDE files
 .metadata/
-.vscode/
+.recommenders/
+.settings/
+bin/
+
+# Node.js modules (if you use npm)
 node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log

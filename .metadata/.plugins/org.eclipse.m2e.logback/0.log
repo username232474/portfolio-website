@@ -1,5 +1,0 @@
-2026-01-28 19:01:03,303 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
-2026-01-28 19:04:20,038 [pool-8-thread-1] INFO  org.eclipse.jetty.server.Server - jetty-12.1.0; built: 2025-08-15T04:53:41.572Z; git: c8372b65bd15404de1444d68902c0455a3a69b64; jvm 21.0.8+9-LTS
-2026-01-28 19:04:20,067 [pool-8-thread-1] INFO  o.e.j.server.handler.ContextHandler - Started oejsh.ContextHandler@5e11715b{ROOT,/,b=null,a=AVAILABLE,vh=[127.0.0.1],h=oejsh.ResourceHandler@1dc8103b{STARTED}}
-2026-01-28 19:04:20,083 [pool-8-thread-1] INFO  o.e.jetty.server.AbstractConnector - Started oejs.ServerConnector@14e09c6a{HTTP/1.1, (http/1.1)}{0.0.0.0:51381}
-2026-01-28 19:04:20,090 [pool-8-thread-1] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@302b0a4{STARTING}[12.1.0,sto=0] @236532ms
