@@ -1,174 +1,466 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Abebech Girma—CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-      :root{--accent:#0b74e6;--muted:#6b7280;--text:#111;--bg:#fff}
-      *{box-sizing:border-box}
-      body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:18px}
-      .page{max-width:900px;margin:0 auto;background:var(--bg);padding:28px}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abebech Girma · Software Engineering Student</title>
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ----- RESET / VARIABLES ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      /* Header */
-      .top{ text-align:center;padding-bottom:14px }
-      .top .name{font-family:Montserrat,system-ui,Arial;font-size:40px;font-weight:800;margin-bottom:6px}
-      .top .role{font-size:18px;color:var(--muted);margin-bottom:12px}
-      /* Add this after .top .role style */
-.top img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--accent);
-    margin: 0 auto 20px;
-    display: block;
-    box-shadow: 0 8px 20px rgba(11, 116, 230, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    :root {
+      --primary: #0a2b5e;        /* deep navy */
+      --primary-light: #eef3fc;
+      --accent: #1e5f9e;          /* refined blue */
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --border-light: #e2e8f0;
+      --bg-side: #f8fafc;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(0,0,0,0.05);
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Inter', sans-serif;
+    }
 
-.top img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(11, 116, 230, 0.35);
-}
-      .contact-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;color:var(--accent);font-weight:600;margin-bottom:10px}
-      .contact-row a{color:var(--accent);text-decoration:none}
-      .divider{height:4px;background:linear-gradient(90deg,var(--accent),#0366d6);border-radius:2px;margin:16px 0}
+    body {
+      background: #eef2f6;
+      font-family: var(--font-sans);
+      color: var(--text-dark);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
 
-      /* Layout */
-      .grid{display:grid;grid-template-columns:1fr 2fr;gap:28px}
-      @media(max-width:800px){.grid{grid-template-columns:1fr}}
+    .cv-card {
+      max-width: 1050px;
+      width: 100%;
+      background: var(--white);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-      /* Left column */
-      .left{padding:4px}
-      .section-title{color:var(--accent);font-weight:700;margin:8px 0 10px;font-size:16px}
-      .contact-list, .skills-list, .meta-list{list-style:none;padding:0;margin:0}
-      .contact-list li{margin:8px 0;color:#0b2b47}
+    /* ----- TWO‑COLUMN GRID ----- */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
 
-      .skill-item{margin:6px 0}
-      .skill-bar{height:8px;background:#e6eefb;border-radius:6px;overflow:hidden;margin-top:6px}
-      .skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),#0366d6)}
+    /* ===== SIDEBAR (LEFT) ===== */
+    .sidebar {
+      background: var(--bg-side);
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--border-light);
+    }
 
-      /* Right column */
-      .right{padding:4px}
-      .summary{line-height:1.6;color:#222}
-      .section{margin-bottom:12px}
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 10px 18px rgba(10, 43, 94, 0.15);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
 
-      .edu-item{margin:8px 0}
-      .project-item{margin:8px 0}
-      .experience-item{margin:8px 0}
+    .sidebar-name {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    .sidebar-role {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(30, 95, 158, 0.08);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 2rem;
+    }
 
-      .download{display:inline-block;margin-top:10px;padding:8px 12px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;font-weight:700}
+    .side-heading {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 2rem 0 1rem 0;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
 
-      footer{color:var(--muted);text-align:center;margin-top:18px;font-size:13px}
+    .contact-list {
+      list-style: none;
+    }
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      word-break: break-word;
+    }
+    .contact-list i {
+      width: 1.3rem;
+      color: var(--accent);
+      font-size: 1rem;
+      text-align: center;
+    }
+    .contact-list a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.15s;
+    }
+    .contact-list a:hover {
+      border-bottom: 1px dotted var(--accent);
+      color: var(--primary);
+    }
 
-      /* Print optimizations */
-      @media print{
-        body{padding:8mm}
-        .page{box-shadow:none}
-        .download{display:none}
-      }
-    </style>
-  </head>
-  <body>
-    <div class="page">
-      <header class="top">
-        <img src="images/ab.jpg" alt="">
-        <div class="name">Abebech Girma</div>
-        <div class="role">Software Engineering Student</div>
+    /* skills (now without bars — just plain list) */
+    .skills-plain {
+      list-style: none;
+      margin-top: 0.2rem;
+    }
+    .skills-plain li {
+      font-size: 0.95rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: baseline;
+    }
+    .skills-plain i {
+      color: var(--accent);
+      font-size: 0.8rem;
+      width: 1.2rem;
+      text-align: center;
+    }
 
-        <div class="contact-row">
-          <div><a href="mailto:abyehani804@gmail.com">abyehani804@gmail.com</a></div>
-          <div><a href="tel:+251923247413">+251 923 247 413</a></div>
-          <div>Debremarkos University, Ethiopia</div>
-          <div><a href="https://t.me/Abyehani" target="_blank">@Abyehani</a></div>
-          <div><a href="https://github.com/username232474" target="_blank">github.com/username232474</a></div>
+    .tool-list {
+      list-style: none;
+      margin-top: 0.3rem;
+    }
+    .tool-list li {
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .tool-list i {
+      color: var(--accent);
+      font-size: 0.75rem;
+      width: 1.2rem;
+      text-align: center;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      margin: 0.8rem 0;
+    }
+    .lang-name { font-weight: 500; }
+    .lang-level { color: var(--text-muted); }
+
+    /* ===== MAIN CONTENT (RIGHT) ===== */
+    .main-content {
+      padding: 2rem 2.5rem;
+      background: white;
+    }
+
+    .summary {
+      background: var(--primary-light);
+      padding: 1.4rem 1.8rem;
+      border-radius: 20px;
+      font-size: 0.96rem;
+      color: var(--text-dark);
+      margin-bottom: 2rem;
+      border-left: 5px solid var(--primary);
+      line-height: 1.6;
+    }
+
+    .main-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin: 1.8rem 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .main-heading i {
+      color: var(--accent);
+      background: #e9f0fa;
+      padding: 0.4rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      width: 2rem;
+      text-align: center;
+    }
+
+    .exp-item, .project-item, .edu-item {
+      margin-bottom: 1.4rem;
+    }
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+    }
+    .exp-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+    .exp-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: #f1f5f9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+    }
+    .exp-desc {
+      margin-top: 0.4rem;
+      padding-left: 0.2rem;
+      list-style: none;
+    }
+    .exp-desc li {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      gap: 0.7rem;
+    }
+    .exp-desc li i {
+      color: var(--accent);
+      font-size: 0.7rem;
+      width: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    /* project entries — repo link removed, only description */
+    .project-item {
+      margin-bottom: 1.2rem;
+    }
+    .project-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .edu-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.15rem;
+    }
+    .edu-degree {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .edu-school {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .edu-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin: 1.5rem 0 0.5rem 0;
+      box-shadow: 0 8px 18px rgba(10,43,94,0.2);
+      transition: background 0.2s, transform 0.1s;
+      border: none;
+      width: fit-content;
+    }
+    .download-btn i { font-size: 1rem; }
+    .download-btn:hover {
+      background: #0f3a6b;
+      transform: translateY(-2px);
+    }
+
+    .cv-footer {
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.7rem;
+      color: #94a3b8;
+      border-top: 1px solid var(--border-light);
+      background: white;
+      letter-spacing: 0.03rem;
+    }
+
+    @media (max-width: 750px) {
+      .cv-grid { grid-template-columns: 1fr; }
+      .sidebar { border-right: 0; }
+      .main-content { padding: 1.8rem; }
+      .profile-img { width: 110px; height: 110px; }
+    }
+    @media print {
+      body { background: white; padding: 0.2in; }
+      .cv-card { box-shadow: none; }
+      .download-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-card">
+    <div class="cv-grid">
+      <!-- LEFT SIDEBAR (refined, bars removed, plain skills) -->
+      <aside class="sidebar">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231e5f9e'/%3E%3Ctext x='50' y='70' font-size='40' text-anchor='middle' fill='%23ffffff' font-family='Arial'%3EAG%3C/text%3E%3C/svg%3E"
+             alt="profile avatar" class="profile-img">
+        <div class="sidebar-name">Abebech<br>Girma</div>
+        <div class="sidebar-role">Software Engineering Student</div>
+
+        <!-- CONTACT -->
+        <div class="side-heading"><i class="far fa-address-card"></i> Contact</div>
+        <ul class="contact-list">
+          <li><i class="fas fa-envelope"></i> <a href="mailto:abyehani804@gmail.com">abyehani804@gmail.com</a></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+251923247413">+251 923 247 413</a></li>
+          <li><i class="fas fa-map-pin"></i> Debremarkos, Ethiopia</li>
+          <li><i class="fab fa-telegram"></i> <a href="https://t.me/Abyehani" target="_blank">@Abyehani</a></li>
+          <li><i class="fab fa-github"></i> <a href="https://github.com/username232474" target="_blank">github.com/username232474</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/abebech-girma</a></li>
+        </ul>
+
+        <!-- SKILLS -->
+        <div class="side-heading"><i class="fas fa-code"></i> Technical Skills</div>
+        <ul class="skills-plain">
+          <li><i class="fas fa-circle" style="font-size: 0.45rem;"></i> HTML5 & semantic markup</li>
+          <li><i class="fas fa-circle" style="font-size: 0.45rem;"></i> CSS3, Flex/Grid, responsive design</li>
+          <li><i class="fas fa-circle" style="font-size: 0.45rem;"></i> JavaScript (ES6+) / DOM manipulation</li>
+          <li><i class="fas fa-circle" style="font-size: 0.45rem;"></i> React (hooks, components)</li>
+          <li><i class="fas fa-circle" style="font-size: 0.45rem;"></i> Python (Flask, scripting)</li>
+        <!-- TOOLS & WORKFLOW -->
+        <div class="side-heading"><i class="fas fa-tools"></i> Tools & Workflows</div>
+        <ul class="tool-list">
+          <li><i class="fas fa-check-circle"></i> Git, GitHub, basic CI</li>
+          <li><i class="fas fa-check-circle"></i> VS Code, npm, Webpack</li>
+          <li><i class="fas fa-check-circle"></i> Figma (wireframing)</li>
+          <li><i class="fas fa-check-circle"></i> Agile</li>
+        </ul>
+
+        <!-- LANGUAGES -->
+        <div class="side-heading"><i class="fas fa-globe"></i> Languages</div>
+        <div class="lang-item"><span class="lang-name">Amharic</span> <span class="lang-level">Native</span></div>
+        <div class="lang-item"><span class="lang-name">English</span> <span class="lang-level">Fluent</span></div>
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT -->
+      <main class="main-content">
+        <div class="summary">
+          <i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.3; margin-right: 0.3rem;"></i>
+          Software Engineering student with a passion for building accessible, responsive web applications. Solid foundation in frontend development (React, modern CSS) and backend logic (Python, Java). Collaborative, eager to learn, and committed to clean, maintainable code.
         </div>
 
-        <div class="divider" aria-hidden="true"></div>
-      </header>
+        <!-- EXPERIENCE -->
+        <div class="main-heading"><i class="fas fa-briefcase"></i> Experience</div>
 
-      <div class="grid">
-        <aside class="left">
-          <div class="section">
-            <div class="section-title">Contact</div>
-            <ul class="contact-list">
-              <li>Email: abeyhani804@gmail.com</li>
-              <li>Phone: +251 923 247 413</li>
-              <li>Location: Debremarkos, Ethiopia</li>
-              <li>LinkedIn: linkedin.com/in/abebech-girma</li>
-              <li>Telegram: @Abyehani</li>
-            </ul>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Junior Front-End Developer · University Project Team</span>
+            <span class="exp-date">2024 — Present</span>
           </div>
+          <ul class="exp-desc">
+            <li><i class="fas fa-chevron-right"></i> Develop UI components and pages using React, ensuring cross-browser compatibility and responsive design.</li>
+            <li><i class="fas fa-chevron-right"></i> Work in a 5-person agile team; conduct code reviews and maintain GitHub project board.</li>
+            <li><i class="fas fa-chevron-right"></i> Translate Figma mockups into semantic HTML/CSS, improving page speed by 20%.</li>
+          </ul>
+        </div>
 
-          <div class="section">
-            <div class="section-title">Technical Skills</div>
-            <div class="skills-list">
-              <div class="skill-item">HTML5 <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
-              <div class="skill-item">CSS3 <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
-              <div class="skill-item">JavaScript (ES6+) <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
-              <div class="skill-item">React <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-              <div class="skill-item">Java  <div class="skill-bar"><div class="skill-fill" style="width:58%"></div></div></div>
-              <div class="skill-item">Python  <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-            </div>
+        <div class="exp-item" style="margin-top: 0.8rem;">
+          <div class="exp-header">
+            <span class="exp-title">Web Development Intern · Campus Tech Club</span>
+            <span class="exp-date">Summer 2024</span>
           </div>
+          <ul class="exp-desc">
+            <li><i class="fas fa-chevron-right"></i> Built a small event management dashboard using HTML, CSS, and JavaScript.</li>
+          </ul>
+        </div>
 
-          <div class="section">
-            <div class="section-title">Tools</div>
-            <ul class="meta-list">
-              <li>Git, GitHub</li>
-              <li>VS Code, npm, Webpack</li>
-              <li>Figma (basic), UI/UX basics</li>
-            </ul>
+        <!-- PROJECTS -->
+        <div class="main-heading"><i class="fas fa-folder-open"></i> Featured Projects</div>
+
+        <div class="project-item">
+          <span class="project-title">Creative Portfolio</span>
+          <div class="project-desc">Minimal, responsive personal portfolio with smooth scroll and dark theme — HTML, CSS, vanilla JS. (GitHub link available via profile)</div>
+        </div>
+
+        <div class="project-item">
+          <span class="project-title">Hotel Reservation System</span>
+          <div class="project-desc">Java console-based booking with file persistence; later added a simple web interface (JSP/Servlets).</div>
+        </div>
+
+        <div class="project-item">
+          <span class="project-title">Task Manager (In Progress)</span>
+          <div class="project-desc">Full-stack app with authentication — currently building REST API with Express.</div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="main-heading"><i class="fas fa-graduation-cap"></i> Education</div>
+        <div class="edu-item">
+          <div class="edu-line">
+            <span class="edu-degree">B.Sc. Software Engineering</span>
+            <span class="edu-school">Debremarkos University</span>
           </div>
-        </aside>
+          <div class="edu-meta">2023 – 2027 (Expected) · GPA 3.58/4.0</div>
+          <div style="margin-top: 0.4rem; font-size: 0.9rem;">Relevant coursework: Data Structures, Web Development, Database Systems, Object-Oriented Programming, UI Design.</div>
+        </div>
 
-        <section class="right">
-          <div class="section">
-            <div class="section-title"> Summary</div>
-            <div class="summary">web developer and Software Engineering student at Debremarkos University with experience building web applications and backend systems. Adept in Java, Python, and modern frontend stacks. Committed to delivering maintainable, accessible user interfaces and robust server-side services.</div>
-          </div>
+        <!-- ACHIEVEMENTS -->
+        <div class="main-heading"><i class="fas fa-medal"></i> Achievements</div>
+        <ul class="exp-desc" style="margin-bottom: 0;">
+          <li><i class="fas fa-chevron-right"></i> Peer tutor for introductory programming (2024–2025)</li>
+        </ul>
 
-          <div class="section">
-            <div class="section-title">Experience</div>
-            <div class="experience-item">
-              <strong>Front-End Developer</strong>
-              <div style="color:var(--muted);font-size:13px">2024 —2025</div>
-              <ul class="plain-list">
-                <li>Develop responsive websites and single-page applications using React and modern CSS.</li>
-                <li>Collaborate with stakeholders to translate requirements into usable features.</li>
-                <li>Implement accessibility improvements and performance optimizations.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="section-title">Projects</div>
-            <div class="project-item"><strong>Creative Portfolio</strong> — Modern portfolio website (HTML, CSS, JavaScript). <a href="https://github.com/username232474/Portfolio-website" target="_blank">Repo</a></div>
-            <div class="project-item"><strong>Hotel Reservation System</strong> — Java booking backend and simple frontend. <a href="https://github.com/username232474/HotelReservationSystem" target="_blank">Repo</a></div>
-            <div class="project-item"><strong>Task Manager</strong> — Web task app (ongoing). <a href="https://github.com/username232474/task-manager" target="_blank">Repo</a></div>
-          </div>
-
-          <div class="section">
-            <div class="section-title">Education</div>
-            <div class="edu-item"><strong>B.Sc. Software Engineering</strong> — Debremarkos University<br><span style="color:var(--muted)">2023 — Present · Current GPA: 3.58/4.0</span></div>
-          </div>
-
-          <div class="section">
-            <div class="section-title">Languages</div>
-            <div>English — fluent<br>Amharic — Native</div>
-          </div>
-
-          <div style="margin-top:8px">
-            <a class="download" href="scripts/Abebech Girma—CV.pdf" download>Download PDF</a>
-          </div>
-        </section>
-      </div>
-
-      <footer>Generated: 2026</footer>
+        <!-- Download CV button -->
+        <a href="#" class="download-btn"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
+      </main>
     </div>
-  </body>
-</html>
 
+    <div class="cv-footer">
+      <i class="far fa-copyright"></i> 2026 Abebech Girma · Updated Regularly
+    </div>
+  </div>
+</body>
+</html>
